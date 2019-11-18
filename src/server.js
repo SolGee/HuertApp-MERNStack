@@ -7,7 +7,14 @@ const app = express();
 
 connectDB();
 
-app.get('/', (req, res) => res.send('API Running'));
+app.get('/', (req, res) => res.send('API Running.'));
+
+//Define Routes
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/posts', require('./routes/api/posts'));
+app.use('/api/profile', require('./routes/api/profile'));
+
 
 //This variable will help us when we deploy to Heroku, cause it will give us the port number
 const PORT = process.env.PORT || 5000;
