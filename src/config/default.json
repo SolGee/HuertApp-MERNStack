@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://Sol-MERN:sol123@huertapp01-zzcfu.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://Sol-MERN:sol123@huertapp01-zzcfu.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }

@@ -4,6 +4,11 @@ const router = express.Router();
 const gravatar = require('gravatar');
 //This allow us to encryot the user password
 const bcrypt = require('bcryptjs');
+//JWT will return an auth token to the users
+const jwt = require('jsonwebtoken');
+//Module that looks for the global variables
+const config = require('config');
+//Express-validator validates that the values agree with the params required
 const {
     check,
     validationResult
@@ -69,7 +74,27 @@ router.post('/', [
         await user.save();
 
         //Return jsonwebtoken
-        res.send('User registered')
+        const payLoad = {
+            user: {
+                id: user.id
+            }
+        }
+
+        jwt.sign(
+            payLoad,
+            config.get('jwtSecret'), {
+                expiresIn: 360000
+            },
+            (err, token) => {
+                if (err) {
+                    throw err
+                } else {
+                    res.json({
+                        token
+                    })
+                }
+
+            })
 
     } catch (err) {
         console.error(err.message);
