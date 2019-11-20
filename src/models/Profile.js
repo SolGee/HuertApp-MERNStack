@@ -12,10 +12,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    status: {
-        type: String,
-        required: true
-    },
+
     skills: {
         type: [String],
         required: true
@@ -23,23 +20,7 @@ const ProfileSchema = new mongoose.Schema({
     bio: {
         type: String
     },
-    experience: [{
-        title: {
-            type: String,
-            required: true
-        },
-        from: {
-            type: Date,
-            required: true
-        },
-        to: {
-            type: Date
-        },
 
-        description: {
-            type: String
-        }
-    }],
     social: {
         youtube: {
             type: String
@@ -50,9 +31,7 @@ const ProfileSchema = new mongoose.Schema({
         facebook: {
             type: String
         },
-        linkedin: {
-            type: String
-        },
+
         instagram: {
             type: String
         }
