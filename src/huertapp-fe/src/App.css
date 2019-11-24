@@ -35,3 +35,41 @@ nav {
 figure {
     margin-bottom: 0;
 }
+
+section {
+    background: #b6d0f2;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b6d0f2 0%, #ffffff 68%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b6d0f2 0%, #ffffff 68%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b6d0f2 0%, #ffffff 68%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#b6d0f2', endColorstr='#ffffff', GradientType=0);
+    /* IE6-9 */
+    background-attachment: fixed;
+}
+
+
+/*LOGIN*/
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.orange {
+    background-image: url('./assets/orange-register.jpg');
+    background-size: cover;
+}
+
+.orange,
+.register-container {
+    width: 50%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /*LOGIN*/
+}
