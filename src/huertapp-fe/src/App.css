@@ -60,16 +60,26 @@ section {
 }
 
 .orange {
+    width: 100vw;
     background-image: url('./assets/orange-register.jpg');
     background-size: cover;
 }
 
-.orange,
 .register-container {
-    width: 50%;
-    height: 100%;
+    display: none;
 }
 
-@media only screen and (min-width: 768px) {
+
+/*Register*/
+
+@media only screen and (min-width: 769px) {
     /*LOGIN*/
+    .register-container {
+        display: block;
+    }
+    .orange,
+    .register-container {
+        width: 50%;
+        height: 100%;
+    }
 }
